@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>COZIP | Code Editor</title>
+        <script src="./js/main.js" async ></script>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/utilities.css">
+        <script src="./js/var&const.js" async ></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo" title="Options">COZIP</div>
+        <div class="menu hide">
+            <div class="reset">Reset</div>
+            <div class="setting">
+                <details>
+                    <summary>Setting</summary>
+                    <div class="options">
+                        <div class="size">
+                            fontSize: <input type="number" min="10" max="30">
+                        </div>
+                        <div class="color">
+                            font: <select name="font" id="font-selector">
+                                <option value="Arial">Arial</option>
+                                <option value="consolas">Console</option>
+                                <option value="cursive">Cursive</option>
+                            </select>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <ul>
+            <li id="htmlfile"> <img src="./images/htmlpic.PNG" alt="Html">index.html</li>
+            <li id="cssfile"> <img src="./images/csspic.PNG" alt="Html">style.css</li>
+            <li id="jsfile"> <img src="./images/jspic.PNG" alt="Html">script.js</li>
+        </ul>
+    </header>
+    <div class="popup">
+        Let's <br> Start the Code
+    </div>
+    <button id="runBtn">Run</button>
+    <div class="container">
+        <div class="left">
+            <section id="HTML">
+            <div class="html">
+                <h2 id="htmlheading">Html</h2>
+                <textarea name="htmlcode" tabindex="1000000" spellcheck="false" id="Htmlcode" class="input"></textarea>
+            </div>
+            </section>
+            <section id="CSS">
+            <div class="css">
+                <h2 id="cssheading">Css</h2>
+                <textarea name="csscode" tabindex="1000000" spellcheck="false" id="Csscode" class="input"></textarea>
+            </div>
+            </section>
+            <section id="JS">
+            <div class="js">
+                <h2 id="jsheading">JavaScript</h2>
+                <textarea name="jscode" tabindex="1000000" spellcheck="false" id="Jscode" class="input"></textarea>
+            </div>
+            </section>
+        </div>
+        <div class="right">
+            <h2>Output</h2>
+            <iframe src="" frameborder="0"></iframe>
+        </div>
+    </div>
+</body>
+<script src="./js/script.js"></script>
+<script src="./js/setting.js"></script>
+<script src="./js/DB.js"></script>
+</html>

@@ -1,0 +1,73 @@
+:root{
+    --std-p-font: 0.7rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scrollbar-width: thin;
+}
+body{
+    background-color: black;
+    color: aliceblue;
+}
+header{
+    text-align: center;
+    padding: 10px;
+}
+main{
+    margin-top: 1px;
+    padding: 20px;
+    color: rgb(216, 248, 250);
+}
+main .name{
+    text-align: center;
+    font-size: smaller;
+    color: rgb(0, 81, 255);
+}
+main .features{
+    font-size: small;
+    margin-top: 60px;
+}
+main .features ul{
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+main .explainFeatures h3{
+    font-size: 1rem;
+}
+main .explainFeatures p{
+    font-size: var(--std-p-font);
+    padding-left: 30px;
+    padding: 10px;
+}
+main .explainFeatures img{
+    height: 180px;
+    width: 200px;
+    border: 1px solid gray;
+    margin-left: 70px;
+}
+main .explainFeatures div{
+    margin: 15px 0;
+}
+main .limitations ul{
+    font-size: var(--std-p-font);
+    margin: 20px;
+}
+main .preference ul{
+    font-size: var(--std-p-font);
+    margin: 20px;
+}
+a{
+    text-decoration: none;
+    color: rgb(14, 14, 14);
+}
+main .buttons button{
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    color: rgb(68, 68, 68);
+    background-color: rgb(0, 255, 234);
+}

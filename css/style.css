@@ -1,0 +1,301 @@
+
+:root{
+    --background : #000000;
+    --con-back:white;
+    --borders: rgb(73, 73, 73);
+    --border: rgb(0, 0, 0);
+    --icon-color:white;
+    --font-color:white;
+    --output-color:rgb(255, 255, 255);
+    --input-color:rgb(244, 241, 241);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+
+html,body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--borders);
+    overflow: hidden;
+}
+header {
+    position: fixed;
+    top: 0;
+    z-index: 10000000000;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+    font-size: 0.7rem;
+    border-bottom: 1px groove #3b3a3a;
+    box-shadow: 0 0 10px #3b3a3a;
+}
+header img{
+    height: 15px; 
+}
+header ul{
+    padding: 7px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+#htmlfile{
+    border-bottom: 1px solid white;
+}
+header .logo{
+    padding-left: 10px;
+    padding-right: 1%;
+    color: rgb(167, 28, 172);
+    font-family: fantasy;
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+    text-shadow: 0 0 4px rgb(139, 139, 139);
+    cursor: pointer;
+}
+header ul li{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 4px 4%;
+    color: aliceblue;
+    margin: 0 3px;
+    /* border: 1px solid rgb(75, 74, 74); */
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.5s linear;
+}
+header li:hover{
+    border-bottom: 1px solid rgb(241, 241, 245);
+}
+#runBtn{
+    position: absolute;
+    z-index: 100000000000;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 0.6rem;
+    box-shadow: 0 0 20px rgb(95, 94, 94);
+    top: 50px;
+    right: 20px;
+    border: 1px solid white;
+}
+#runBtn:active{
+    transform: scale(0.9);
+}
+.container{
+    background-color: transparent;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+.icon{
+    position: absolute;
+    right: 5px;
+    top: 7px;
+    color: var(--icon-color);
+}
+.left{
+    margin-right:5px;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.right{
+    width: 50%;
+    height: 100%;
+    resize: both;
+    overflow: hidden;
+    border: 2px solid var(--border);
+}
+.left textarea{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(22, 28, 36);
+}
+.left h2{
+    font-size: 0.8rem;
+    padding: 2px 2px 2px 5px;
+    background-color: var(--background);
+    color: var(--font-color);
+    border-radius: 10px 10px 0px 0px;
+}
+.left section{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 20px;
+}
+#HTML{
+    z-index: 1;
+}
+.left .html{
+    height: 100%;
+    width: 100%;
+}
+.left .css{
+    height: 100%;
+    width: 100%;
+}
+.left .js{
+    height: 100%;
+    width: 100%;
+}
+#htmlheading{
+    color: rgba(244, 119, 20,1);
+}
+#cssheading{
+    color: rgba(38, 109, 204,1);
+}
+#jsheading{
+    color: rgb(134, 132, 20);
+}
+#Htmlcode{
+    color: rgb(13, 183, 13);
+}
+#Htmlcode::selection{
+    background-color: rgb(13, 183, 13);
+    color: black;
+}
+#Csscode{
+    color: rgb(0, 179, 255);
+}
+#Csscode::selection{
+    background-color: rgb(0, 179, 255);
+    color: black;
+}
+#Jscode{
+    color: rgb(255, 190, 49);
+}
+#Jscode::selection{
+    background-color: rgb(216, 108, 0);
+    color: black;
+}
+.right{
+    background-color: beige;
+}
+.right iframe{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    color: var(--border);
+    background-color: var(--output-color);
+}
+textarea{
+    border:2px solid var(--border);
+    padding: 10px;
+    font-family: consolas,monospace;
+    font-size: 0.9rem;
+    background-color: var(--input-color);
+    scrollbar-width: thin;
+    scrollbar-track-color: var(--input-color);
+}
+textarea:focus{
+    outline: none;
+}
+.right h2{
+    background-color: var(--background);
+    color: var(--font-color);
+    padding: 8px;
+    font-size: 0.9rem;
+}
+.popup{
+    position: absolute;
+    z-index: 1000000000000000;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: cursive;
+    color: rgb(4, 143, 4);
+    text-shadow: 0 0 10px rgb(85, 83, 85);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: startCode 3s 1 linear;
+}
+@keyframes startCode {
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.menu{
+    position: absolute;
+    z-index: 100;
+    background-color: rgb(22, 28, 36);
+    box-shadow:  0 0 10px black;
+    color: rgb(240, 215, 250);
+    top: 43px;
+    left: 10px;
+    padding: 2px;
+}
+.menu summary{
+    list-style: none;
+}
+.menu>div{
+    padding: 5px 8px; 
+    background-color: rgb(22, 28, 36);
+    margin: 2px;
+    cursor: pointer;
+}
+.menu>div:hover{
+    background-color: rgb(31, 34, 37);
+}
+.menu details>div{
+    position: absolute;
+    padding: 6px;
+    background-color: rgb(31, 34, 37);
+    top: 55px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 5px;
+}
+input:focus{
+    outline: none;
+    scale: 1.02;
+}
+select:focus{
+    outline: none;
+    scale: 1.02;
+}
+.menu details>div>input{
+    width: 50px;
+}
+.menu details>div>select{
+    width: 50px;
+}
